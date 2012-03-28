@@ -199,6 +199,11 @@ attribute "apache/worker/maxrequestsperchild",
   :description => "Maximum number of request a child process will handle",
   :default => "0"
 
+attribute "apache/worker/threadlimit",
+  :display_name => "Apache Worker MPM ThreadLimit",
+  :description => "Maximum number of of threads per child process",
+  :default => "64"
+
 attribute "apache/default_modules",
   :display_name => "Apache Default Modules",
   :description => "Default modules to enable via recipes",

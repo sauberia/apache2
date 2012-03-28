@@ -71,6 +71,7 @@ KeepAliveTimeout <%= node[:apache][:keepalivetimeout] %>
 # MinSpareThreads: minimum number of worker threads which are kept spare
 # MaxSpareThreads: maximum number of worker threads which are kept spare
 # ThreadsPerChild: constant number of worker threads in each server process
+# ThreadLimit: maximum number of of threads per child process
 # MaxRequestsPerChild: maximum number of requests a server process serves
 <IfModule mpm_worker_module>
     StartServers          <%= node[:apache][:worker][:startservers] %>
@@ -78,6 +79,7 @@ KeepAliveTimeout <%= node[:apache][:keepalivetimeout] %>
     MinSpareThreads       <%= node[:apache][:worker][:minsparethreads] %>
     MaxSpareThreads       <%= node[:apache][:worker][:maxsparethreads] %>
     ThreadsPerChild       <%= node[:apache][:worker][:threadsperchild] %>
+    ThreadLimit           <%= node[:apache][:worker][:threadlimit] %>
     MaxRequestsPerChild   <%= node[:apache][:worker][:maxrequestsperchild] %>
 </IfModule>
 

@@ -127,6 +127,7 @@ default[:apache][:worker][:maxclients] = 1024
 default[:apache][:worker][:minsparethreads] = 64
 default[:apache][:worker][:maxsparethreads] = 192
 default[:apache][:worker][:threadsperchild] = 64
+default[:apache][:worker][:threadlimit] = 64
 default[:apache][:worker][:maxrequestsperchild] = 0
 
 # Default modules to enable via include_recipe
